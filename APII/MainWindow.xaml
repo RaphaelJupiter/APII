@@ -19,13 +19,13 @@
         <!-- Zone d'affichage de la blague -->
         <TextBox x:Name="lblJoke"
                  Text="Cliquez sur le bouton pour afficher une blague"
-                 Te<!--xtWrapping="Wrap"
+                 TextWrapping="Wrap"
                  FontSize="16"
                  HorizontalAlignment="Center" VerticalAlignment="Bottom"
                  Margin="20,0,20,20"
                  TextAlignment="Center"
                  IsReadOnly="True"
                  Background="Transparent"
-                 BorderBrush="Transparent" />-->
+                 BorderBrush="Transparent" />
     </Grid>
 </Window>
