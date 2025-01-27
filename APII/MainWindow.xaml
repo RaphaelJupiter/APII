@@ -20,12 +20,12 @@
         <TextBox x:Name="lblJoke"
                  Text="Cliquez sur le bouton pour afficher une blague"
                  TextWrapping="Wrap"
-                 Fon<!--tSize="16"
+                 FontSize="16"
                  HorizontalAlignment="Center" VerticalAlignment="Bottom"
                  Margin="20,0,20,20"
                  TextAlignment="Center"
                  IsReadOnly="True"
                  Background="Transparent"
                  BorderBrush="Transparent" />
-    </Grid>-->
+    </Grid>
 </Window>
