@@ -1,7 +1,7 @@
 ﻿<Window x:Class="APII.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Générateur de Blagues" Height="300" Width="500">
+        Title="Générateur de Blagues" Height="500" Width="800">
     <Grid Background="Gray">
         <!-- Titre de l'application -->
         <TextBlock Text="Générateur de Blagues"
@@ -9,23 +9,37 @@
                    HorizontalAlignment="Center" VerticalAlignment="Top"
                    Margin="0,10,0,0" />
 
+        <!-- Liste déroulante pour le type de blague -->
+        <ComboBox x:Name="cbJokeCategory"
+           Width="200" Height="30"
+           HorizontalAlignment="Center" VerticalAlignment="Top"
+           Margin="0,77,0,0">
+            <ComboBoxItem Content="Any" IsSelected="True"/>
+            <ComboBoxItem Content="Programming"/>
+            <ComboBoxItem Content="Miscellaneous"/>
+            <ComboBoxItem Content="Dark"/>
+            <ComboBoxItem Content="Pun"/>
+            <ComboBoxItem Content="Spooky"/>
+            <ComboBoxItem Content="Christmas"/>
+        </ComboBox>
+
         <!-- Bouton pour générer une blague -->
         <Button x:Name="btnGenerateJoke"
                 Content="Générer une Blague"
-                Width="200" Height="40"
-                HorizontalAlignment="Center" VerticalAlignment="Center"
-                Click="btnGenerateJoke_Click" />
+                Width="220" Height="60"
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                Click="btnGenerateJoke_Click" Margin="0,207,0,0" />
 
         <!-- Zone d'affichage de la blague -->
         <TextBox x:Name="lblJoke"
                  Text="Cliquez sur le bouton pour afficher une blague"
                  TextWrapping="Wrap"
                  FontSize="16"
-                 HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                 Margin="20,0,20,20"
+                 HorizontalAlignment="Center" VerticalAlignment="Top"
+                 Margin="0,338,0,0"
                  TextAlignment="Center"
                  IsReadOnly="True"
                  Background="Transparent"
-                 BorderBrush="Transparent" />
+                 BorderBrush="Transparent" Width="360" />
     </Grid>
 </Window>

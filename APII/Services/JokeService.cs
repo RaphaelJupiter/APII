@@ -11,14 +11,17 @@ namespace APII.Services
 {
     public class JokeService
     {
-        public async Task<string> GetJokeAsync()
+        public async Task<string> GetJokeAsync(string category)
         {
             using (HttpClient client = new HttpClient())
             {
                 try
                 {
-                    // Appel à l'API pour obtenir la blague
-                    HttpResponseMessage response = await client.GetAsync("https://v2.jokeapi.dev/joke/Any");
+                    // Construire l'URL en fonction de la catégorie sélectionnée
+                    string url = $"https://v2.jokeapi.dev/joke/{category}";
+
+                    // Appel à l'API
+                    HttpResponseMessage response = await client.GetAsync(url);
                     response.EnsureSuccessStatusCode();  // Vérifie que la réponse est correcte
 
                     // Lecture du contenu de la réponse sous forme de chaîne JSON
@@ -44,6 +47,7 @@ namespace APII.Services
                 }
             }
         }
+
     }
 
 }
